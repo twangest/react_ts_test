@@ -1,0 +1,10 @@
+.container {
+  width: 75%;
+  margin: auto;
+}
+
+form.bordered {
+  padding: 2rem;
+  border: 1px solid white;
+  border-radius: 10px;
+}
