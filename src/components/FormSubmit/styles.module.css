@@ -1,7 +1,26 @@
 .submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #007AFF;
     border-radius: 8px;
-    width: 100%;
-    padding:1rem; 
-    color:white;
+
+    width: 343px !important;
+    height: 50px !important;
+
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--text-color);
+
+    font-family: Gotham Pro, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+
+    text-align: center;
+    letter-spacing: -0.408px;
+
+    margin-top: 48px;
+    margin-bottom: 20px;
 }

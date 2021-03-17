@@ -1,10 +1,10 @@
 import React from 'react';
-import { Dispatch } from 'redux';
-import { connect } from 'react-redux';
-import { RootStateType } from '../../redux/store';
-import { addColor, updateColor, deleteColor, PaletteActionType } from '../../redux/actions';
-import { paletteSelector } from '../../redux/selectors';
-import { ColorType } from '../../redux/reducers';
+import {Dispatch} from 'redux';
+import {connect} from 'react-redux';
+import {RootStateType} from '../../redux/store';
+import {addColor, updateColor, deleteColor, PaletteActionType} from '../../redux/actions';
+import {paletteSelector} from '../../redux/selectors';
+import {ColorType} from '../../redux/reducers';
 import ColorPicker from '../../components/ColorPicker';
 import FormSubmit from "../../components/FormSubmit";
 
@@ -15,23 +15,22 @@ interface IColorsPageProps {
   deleteColor: (id: string) => void;
 }
 
-const ColorsPage: React.FunctionComponent<IColorsPageProps> = ({ addColor, updateColor, palette, deleteColor }) => {
+const ColorsPage: React.FunctionComponent<IColorsPageProps> = ({addColor, updateColor, palette, deleteColor}) => {
   const handleOnClick = (event: React.MouseEvent<HTMLElement>) => {
     addColor();
   };
-
+  
   return (
-    <div className='row'>
-      <div className='col s6'>
-        <div className='row'>
-          {palette.map((colorItem) => {
-            const { id } = colorItem;
-            return <ColorPicker  key={id} colorItem={colorItem} updateColor={updateColor} deleteColor={deleteColor}/>;
-          })}
-        </div>
-        <FormSubmit title="Добавить цвет" onClick={handleOnClick} type="button"/>
+    <>
+      <div className='paletteWrapper'>
+        {palette.map((colorItem) => {
+          const {id} = colorItem;
+          return <ColorPicker key={id} colorItem={colorItem} updateColor={updateColor}
+                              deleteColor={deleteColor}/>;
+        })}
       </div>
-    </div>
+      <FormSubmit title="Добавить цвет" onClick={handleOnClick} type="button" className="addColorBtn"/>
+    </>
   );
 };
 

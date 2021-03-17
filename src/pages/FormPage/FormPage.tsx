@@ -42,7 +42,6 @@ const FromPage: React.FunctionComponent<IFromPageProps> = (props) => {
       setLoading(false);
       setLoaded(true);
       setResponse(res.parsedBody)
-      return response;
     };
     if (!loaded) {
       fetchData(requestParams);

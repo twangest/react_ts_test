@@ -1,5 +1,6 @@
 import React, { useRef, useMemo } from 'react';
 import styles from './styles.module.css';
+import img from './Img.png'
 
 interface IFormInputFileProps {
   className?: string;
@@ -12,7 +13,7 @@ const FormInputFile: React.FunctionComponent<IFormInputFileProps> = ({ className
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const imgUrl = useMemo(() => {
-    return files?.length ? URL.createObjectURL(files[0]) : null;
+    return files?.length ? URL.createObjectURL(files[0]) : img;
   }, [files]);
 
   const handleClick = () => {
@@ -21,26 +22,23 @@ const FormInputFile: React.FunctionComponent<IFormInputFileProps> = ({ className
   };
 
   const handleFileInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log({ el: event.target });
     onChange(event.target.files || null);
   };
 
   return (
     <div className='file-input input-field'>
-      <div>Файл</div>
+      
       <div className={styles.imagePicker} onClick={handleClick}>
-        {imgUrl ? (
+        <input
+          ref={fileInputRef}
+          type='file'
+          accept='image/*'
+          className={`${className} hide`}
+          onChange={handleFileInputChange}
+        />
           <img src={imgUrl} className={styles.imagePicker} alt='preview' />
-        ) : (
-          <input
-            ref={fileInputRef}
-            type='file'
-            accept='image/*'
-            className={`${className} hide`}
-            onChange={handleFileInputChange}
-          />
-        )}
       </div>
+      <label htmlFor='input_file'>Фото</label>
     </div>
   );
 };

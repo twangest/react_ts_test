@@ -15,12 +15,14 @@
     height: 17px;
     position: relative;
     top: calc(-17px/2);
-    right: calc(-2*17px);
+    left: calc(100% - 17px/2);
     display: none;
 }
+
 .colorPicker:hover .hoverButton {
     display: inline;
 }
+
 .input {
     visibility: hidden;
 

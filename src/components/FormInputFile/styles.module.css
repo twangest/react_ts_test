@@ -1,9 +1,9 @@
 .imagePicker {
-    width: 100px;
-    height: 100px;
-    border: 1px solid white;
+    width: 122px;
+    height: 86px;
+    /*border: 1px solid white;*/
     border-radius: 8px;
-    background: rgba(118, 118, 128, 0.24);
+    background: var(--background-color-secondary);
     display: flex;
     align-items: center;
     justify-items: center;

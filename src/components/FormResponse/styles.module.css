@@ -1,8 +1,7 @@
 .response {
-    width: 100%;
+    width: 343px;
     height: 120px;
-    background: rgba(118, 118, 128, 0.24);
+    background: var(--background-color-secondary);
     border-radius: 10px;
     color: white;
-    border: 1px solid #EBEBF5;
 }
