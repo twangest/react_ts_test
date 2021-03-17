@@ -1,0 +1,27 @@
+.colorPicker {
+    width: 54px !important;
+    height: 54px !important;
+    margin-right: 25px;
+    margin-bottom: 17px;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.colorPicker .hoverButton {
+    padding: 0;
+    margin: 0;
+    width: 17px;
+    height: 17px;
+    position: relative;
+    top: calc(-17px/2);
+    right: calc(-2*17px);
+    display: none;
+}
+.colorPicker:hover .hoverButton {
+    display: inline;
+}
+.input {
+    visibility: hidden;
+
+}
