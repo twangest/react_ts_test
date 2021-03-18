@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react_ts_test/static/css/main.e69b6344.chunk.css",
+    "main.js": "/react_ts_test/static/js/main.263d9be2.chunk.js",
+    "main.js.map": "/react_ts_test/static/js/main.263d9be2.chunk.js.map",
+    "runtime-main.js": "/react_ts_test/static/js/runtime-main.35466670.js",
+    "runtime-main.js.map": "/react_ts_test/static/js/runtime-main.35466670.js.map",
+    "static/js/2.61c4bd8a.chunk.js": "/react_ts_test/static/js/2.61c4bd8a.chunk.js",
+    "static/js/2.61c4bd8a.chunk.js.map": "/react_ts_test/static/js/2.61c4bd8a.chunk.js.map",
+    "static/js/3.0efa6079.chunk.js": "/react_ts_test/static/js/3.0efa6079.chunk.js",
+    "static/js/3.0efa6079.chunk.js.map": "/react_ts_test/static/js/3.0efa6079.chunk.js.map",
+    "index.html": "/react_ts_test/index.html",
+    "static/css/main.e69b6344.chunk.css.map": "/react_ts_test/static/css/main.e69b6344.chunk.css.map",
+    "static/js/2.61c4bd8a.chunk.js.LICENSE.txt": "/react_ts_test/static/js/2.61c4bd8a.chunk.js.LICENSE.txt",
+    "static/media/Icon.f8c2dd58.svg": "/react_ts_test/static/media/Icon.f8c2dd58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.35466670.js",
+    "static/js/2.61c4bd8a.chunk.js",
+    "static/css/main.e69b6344.chunk.css",
+    "static/js/main.263d9be2.chunk.js"
+  ]
+}
