@@ -2,9 +2,7 @@ import React from 'react';
 import styles from './styles.module.css';
 import { Link } from 'react-router-dom';
 
-interface INavbarProps {}
-
-const Navbar: React.FunctionComponent<INavbarProps> = (props) => {
+const Navbar: React.FunctionComponent = () => {
   return (
     <header className={styles.header}>
       <Link to='/' className={styles.link}>

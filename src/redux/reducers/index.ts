@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import palette from './palette';
-import { enableMapSet } from 'immer'
+import { enableMapSet } from 'immer';
 
-enableMapSet()
+enableMapSet();
 
 export * from './palette';
 
 export default combineReducers({
-    palette
-})
+  palette
+});

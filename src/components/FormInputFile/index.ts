@@ -1,1 +1,1 @@
-export {default} from './FormInputFile'
+export {default} from './FormInputFile';

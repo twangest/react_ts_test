@@ -1,4 +1,4 @@
-import {PALETTE, ADD, UPDATE, DELETE} from '../constants'
+import {PALETTE, ADD, UPDATE, DELETE} from '../constants';
 import { v4 as uuid4 } from 'uuid';
 
 const DEFAULT_COLOR = '#00FF00';
@@ -20,28 +20,31 @@ export type PaletteActionType = {
 }
 
 const colorPalette = (state = initialState, action: PaletteActionType):ColorPaletteStateType => {
-    const {type, id=uuid4(), color = DEFAULT_COLOR} = action;
-    switch (type) {
+  const {type, id=uuid4(), color = DEFAULT_COLOR} = action;
+  
+  const newState = state.filter(item => item.id !== id);
 
-      case PALETTE + ADD: 
-        return [...state, {id, color, isNew: true}]
+  switch (type) {
 
-      case PALETTE + UPDATE:
-          return state.map(item => {
-            if (item.id === id) {
-              item.color = color;
-              if (typeof item.isNew !== 'undefined') {
-                  delete item.isNew;
-              }
-            }
-            return item
-          });
+  case PALETTE + ADD: 
+    return [...state, {id, color, isNew: true}];
 
-      case PALETTE + DELETE:
-          const newState = state.filter(item => item.id !== id);
-          return [...newState];
+  case PALETTE + UPDATE:
+    return state.map(item => {
+      if (item.id === id) {
+        item.color = color;
+        if (typeof item.isNew !== 'undefined') {
+          delete item.isNew;
+        }
+      }
+      return item;
+    });
 
-      default: return state;
-    }
-}
-export default colorPalette
+  case PALETTE + DELETE:
+    
+    return [...newState];
+
+  default: return state;
+  }
+};
+export default colorPalette;

@@ -16,7 +16,7 @@ const FormInputText: React.FunctionComponent<IFormInputTextProps> = ({
   className = '',
   value,
   onChange,
-}) => {
+}: IFormInputTextProps) => {
   return (
     <div className='input-field'>
       <input

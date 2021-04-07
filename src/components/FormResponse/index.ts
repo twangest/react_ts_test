@@ -1,1 +1,1 @@
-export {default} from './FromResponse'
+export {default} from './FromResponse';

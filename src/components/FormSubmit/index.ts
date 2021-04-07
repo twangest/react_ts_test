@@ -1,1 +1,1 @@
-export {default} from './FormSubmit'
+export {default} from './FormSubmit';

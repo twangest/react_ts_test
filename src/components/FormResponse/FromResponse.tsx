@@ -5,7 +5,7 @@ interface IFormResponseProps {
   response: string;
 }
 
-const FormResponse: React.FunctionComponent<IFormResponseProps> = ({ response }) => {
+const FormResponse: React.FunctionComponent<IFormResponseProps> = ({ response }: IFormResponseProps) => {
   return (
     <div className=''>
       <label htmlFor='response_area'>Response</label>

@@ -5,17 +5,14 @@ import FormSubmit from '../../components/FormSubmit';
 import FormResponse from '../../components/FormResponse';
 import { API_URL, HttpResponse, paramsJsonToFormData, postFormData } from '../../utils/api';
 
-// TODO: Добавить свойства
-interface IFromPageProps {}
-
 type RequestParamType = {
   action: 'send_data';
-  id: 1;
+  id: number;
   contact: string;
   image: File | null;
 };
 
-const FromPage: React.FunctionComponent<IFromPageProps> = () => {
+const FromPage: React.FunctionComponent = () => {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [patronymic, setPatronymic] = useState('');

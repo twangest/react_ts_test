@@ -3,4 +3,4 @@ export type RootAction = {
     any?: any,
 }
 
-export * from './palette'
+export * from './palette';
